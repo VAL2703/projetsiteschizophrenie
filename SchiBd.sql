@@ -8,7 +8,7 @@ CREATE TABLE adhérent(
    prénom VARCHAR(50)  NOT NULL,
    pseudo VARCHAR(50)  NOT NULL,
    date_de_naissance DATE NOT NULL,
-   mot__passe DECIMAL(6,0)   NOT NULL,
+   mot__passe VARCHAR(8)   NOT NULL,
    adresse_mail VARCHAR(50)  NOT NULL,
    Type_ad VARCHAR(50)  NOT NULL,
    PRIMARY KEY(Id_adhérent)
@@ -17,7 +17,7 @@ CREATE TABLE adhérent(
 CREATE TABLE forum_de_témoignages(
    Id_forum_de_témoignages INT IDENTITY,
    Pseudo VARCHAR(50)  NOT NULL,
-   Mot_passe DECIMAL(6,0)   NOT NULL,
+   Mot_passe  VARCHAR (8)   NOT NULL,
    Date_dépot DATE NOT NULL,
    Titre VARCHAR(50)  NOT NULL,
    Témoignage VARCHAR(380)  NOT NULL,
@@ -29,8 +29,8 @@ CREATE TABLE forum_de_témoignages(
 
 CREATE TABLE Forum_de_discussions(
    Id_Forum_de_discussions INT IDENTITY,
-   Pseudo VARCHAR(50)  NOT NULL,
-   Mot_passe VARCHAR(50) ,
+   Pseudo VARCHAR(20)  NOT NULL,
+   Mot_passe VARCHAR(8) ,
    Catégorie VARCHAR(50)  NOT NULL,
    Thème VARCHAR(50)  NOT NULL,
    Question VARCHAR(200)  NOT NULL,
